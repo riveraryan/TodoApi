@@ -51,6 +51,10 @@ namespace TodoApi
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TodoApi v1"));*/
             }
 
+            //Allows app to serve static files and enable default mapping
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
